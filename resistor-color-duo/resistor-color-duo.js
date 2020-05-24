@@ -12,5 +12,5 @@ export const RESISTORS = [
 ];
 
 export const decodedValue = (colors) => {
-  return Number(colors.slice(0, 2).map(color => RESISTORS.indexOf(color)).join(''))
+  return Number(`${RESISTORS.indexOf(colors[0])}${RESISTORS.indexOf(colors[1])}`);
 };
