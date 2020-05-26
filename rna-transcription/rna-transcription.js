@@ -6,10 +6,7 @@ export const NUCLEOTIDES = {
 }
 
 export const toRna = (str) => {
-  var transcription = ""
-  str.split('').forEach(function(letter) {
-    transcription += NUCLEOTIDES[letter]
-  });
-  return transcription
+  return str.split('').map(function(n) {
+		return NUCLEOTIDES[n]
+	}).join('')
 };
-
